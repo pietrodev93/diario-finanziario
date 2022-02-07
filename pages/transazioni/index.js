@@ -11,7 +11,7 @@ export default function Transazioni() {
   },[])
 
   const init = async () => {
-    const urlTransactions = `http://localhost:3000/api/transactions`
+    const urlTransactions = `https://transactions-pietro.herokuapp.com/api/transactions`
     const { data } = await axios.get(urlTransactions, {
       headers: {
         'Access-Control-Allow-Origin': '*',
