@@ -14,7 +14,7 @@ export default function Home() {
     e.preventDefault()
     if(username && password){
       
-      const urlLogin = `https://diario-finanziario.vercel.app/api/login`;
+      const urlLogin = `https://diario-finanziario-12b443io3-pietrodev93.vercel.app/api/login`;
       const { data } = await axios.post(urlLogin, {
         username: username,
         passowrd: password
