@@ -1,8 +1,8 @@
 import mongoose from 'mongoose'
 
-const MONGODB_URI = "mongodb+srv://pretuzz:pretuzz@cluster0.quzpg.mongodb.net/pizza?retryWrites=true&w=majority"
+const MONGO_URL = process.env.MONGO_URL
 
-if (!MONGODB_URI) {
+if (!MONGO_URL) {
   throw new Error(
   )
 }
@@ -28,7 +28,7 @@ async function dbConnect() {
       bufferCommands: false,
     }
 
-    cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
+    cached.promise = mongoose.connect(MONGO_URL, opts).then((mongoose) => {
       return mongoose
     })
   }
