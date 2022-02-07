@@ -16,6 +16,7 @@ export default function Transazioni() {
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
+        'Content-Type': 'text/plain'
       }
     })
     if(data.success){
