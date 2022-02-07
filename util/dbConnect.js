@@ -6,7 +6,7 @@ async function dbConnect(){
     if(connection.isConnected){
         return;
     }
-    const db = await mongoose.connect(process.env.MONGODB_URI, {
+    const db = await mongoose.connect("mongodb+srv://pretuzz:pretuzz@cluster0.quzpg.mongodb.net/pizza?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });
