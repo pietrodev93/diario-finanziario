@@ -11,7 +11,7 @@ export default function Transazioni() {
   },[])
 
   const init = async () => {
-    const urlTransactions = `https://diario-finanziario.vercel.app/transazioni/api/transactions`
+    const urlTransactions = `http://localhost:3000/api/transactions`
     const { data } = await axios.get(urlTransactions)
     if(data.success){
       setLoading(false)
