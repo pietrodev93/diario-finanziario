@@ -14,7 +14,7 @@ export default function Home() {
     e.preventDefault()
     if(username && password){
       
-      const urlLogin = `http://localhost:3000/api/login`;
+      const urlLogin = `https://transactions.vercel.app/api/login`;
       const { data } = await axios.post(urlLogin, {
         username: username,
         passowrd: password
