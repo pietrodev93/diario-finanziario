@@ -12,7 +12,12 @@ export default function Transazioni() {
 
   const init = async () => {
     const urlTransactions = `http://localhost:3000/api/transactions`
-    const { data } = await axios.get(urlTransactions)
+    const { data } = await axios.get(urlTransactions, {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+      }
+    })
     if(data.success){
       setLoading(false)
       setTransactions(data.data)
