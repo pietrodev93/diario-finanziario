@@ -11,7 +11,7 @@ export default function Transazioni() {
   },[])
 
   const init = async () => {
-    const urlTransactions = `https://diario-finanziario.vercel.app/api/transactions`
+    const urlTransactions = `https://diario-finanziario-h7xhng8z9-pietrodev93.vercel.app/api/transactions`
     const { data } = await axios.get(urlTransactions, {
       headers: {
         'Access-Control-Allow-Origin': '*',
