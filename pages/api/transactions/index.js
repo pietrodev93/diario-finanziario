@@ -11,8 +11,9 @@ export default async (req, res) => {
             try {
                 const transactions = await Transaction.find({})
                 res.status(200).json({success: true, data: transactions})
-            } catch {
-                res.status(400).json({success: false})
+            } catch (e) {
+                res.status(400).json({success: false, message: e.message})
+
             }
             break;
         case 'POST':
