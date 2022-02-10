@@ -18,7 +18,7 @@ export default function Home() {
       const { data } = await axios.post(urlLogin, {
         username: username,
         passowrd: password
-      })
+      }) 
       if(data.success){
         setError(false)
         router.push('/transazioni')

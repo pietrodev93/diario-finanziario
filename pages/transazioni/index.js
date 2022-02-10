@@ -9,7 +9,6 @@ export default function Transazioni() {
   useEffect(() => {
     init()
   },[])
-
   const init = async () => {
     const urlTransactions = `https://diario-finanziario.vercel.app/api/transactions`
     const { data } = await axios.get(urlTransactions)
