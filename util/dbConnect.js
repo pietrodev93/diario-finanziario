@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 
 const connection = {};
-const MONGO_URL = process.env.MONGO_URL
+const MONGO_URL = process.env.MONGODB_URI
 
 async function dbConnect(){
     if(connection.isConnected){
