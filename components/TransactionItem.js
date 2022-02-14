@@ -1,6 +1,13 @@
+import axios from "axios";
 import React from "react";
+import { useRouter } from 'next/router';
 
-function TransactionItem({ item }) {
+function TransactionItem({ item, deleteItem, setDelete }) {
+  const handleDelete = (id) => {
+    axios.delete(`http://localhost:3000/api/transactions/${id}`).then(() => {
+      setDelete(!deleteItem)
+    })
+  }
   return (
     <tr key={item._id}>
       <td className="px-6 py-4 whitespace-nowrap">
@@ -44,9 +51,9 @@ function TransactionItem({ item }) {
         </a>
       </td>
       <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-        <a href="#" className="text-indigo-600 hover:text-indigo-900">
+        <p onClick={() => handleDelete(item._id)} className="text-indigo-600 hover:text-indigo-900">
           Elimina
-        </a>
+        </p>
       </td>
     </tr>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import TransactionItem from "./TransactionItem";
 
 function TransactionTable(props) {
-    const { data } = props
+    const { data, deleteItem, setDelete } = props
   return (
     <div className="flex flex-col">
       <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -51,7 +51,7 @@ function TransactionTable(props) {
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
                 {data && data.map((item) => (
-                    <TransactionItem key={item._id} item={item}/>
+                    <TransactionItem delete={deleteItem} setDelete={props.setDelete} key={item._id} item={item}/>
                 ))}
               </tbody>
             </table>
