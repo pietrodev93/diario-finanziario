@@ -14,7 +14,7 @@ export default function Transazioni() {
   },[deleteItem])
 
   const init = async () => {
-    const urlTransactions = `http://localhost:3000/api/transactions`
+    const urlTransactions = `https://diario-finanziario.vercel.app/api/transactions`
     const { data } = await axios.get(urlTransactions)
     if(data.success){
       setLoading(false)

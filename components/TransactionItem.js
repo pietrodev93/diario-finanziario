@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 
 function TransactionItem({ item, deleteItem, setDelete }) {
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3000/api/transactions/${id}`).then(() => {
+    axios.delete(`https://diario-finanziario.vercel.app/api/transactions/${id}`).then(() => {
       setDelete(!deleteItem)
     })
   }

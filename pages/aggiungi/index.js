@@ -17,7 +17,7 @@ function Aggiungi() {
     const submitTransaction = (e) => {
         e.preventDefault()
         if(values.name || values.upload || values.amount || values.mainCategory || values.detailCategory){
-            axios.post('http://localhost:3000/api/transactions', 
+            axios.post('https://diario-finanziario.vercel.app/api/transactions', 
                 {
                     "name": `${values.name}`,
                     "upload": `${values.upload}`,
